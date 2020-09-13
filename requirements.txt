@@ -1,0 +1,2 @@
+jieba==0.42.1
+scikit_learn==0.23.2
