@@ -1,7 +1,5 @@
 # 031802433
-
-#### 本次作业已上传至[GitHub](https://github.com/fzu-xm/031802433)
-
+## 查重
 #### <font color = #404040>PSP表格</font>
 <table>
 <tbody>
