@@ -31,7 +31,6 @@ class CosineSimilarity(object):
     def calculate(self):
         # 去除停用词，由于不让调用外部文件，停用词就不去了
         # jieba.analyse.set_stop_words('cn_stopword.txt')
-
         # 提取关键词
         keywords1 = self.extract_keyword(self.s1)
         keywords2 = self.extract_keyword(self.s2)
@@ -68,8 +67,9 @@ if __name__ == '__main__':
         with open(oriPath,encoding='UTF-8') as fp:
             ori = fp.read()
             seg = [i for i in jieba.cut(ori, cut_all=True) if i != '']
-        topK = int(len(seg) / 8)
+        topK = int(len(seg) / 9)
     except:
+        print("路径错误")
         topK = 0
     #读入两段文本
     try:
