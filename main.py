@@ -85,7 +85,20 @@ if __name__ == '__main__':
     similarity = round(model.calculate(),2)
     # 输出文本
     try:
-        with open(ansPath,"w+",encoding='UTF-8') as fp:
-            fp.write(str(similarity))
+        if similarity == 0:
+            with open(ansPath,"w+",encoding='UTF-8') as fp:
+                fp.write(str(0))
+                fp.write('.')
+                fp.write(str(0))
+                fp.write(str(0))
+        elif similarity == 1:
+            with open(ansPath, "w+", encoding='UTF-8') as fp:
+                fp.write(str(1))
+                fp.write('.')
+                fp.write(str(0))
+                fp.write(str(0))
+        else:
+            with open(ansPath,"w+",encoding='UTF-8') as fp:
+                fp.write(str(similarity))
     except:
         print("路径错误")
